@@ -285,13 +285,13 @@
               const data = await response.json();
               
               if (data.success) {
-                  alert('✅ Message sent successfully! We\'ll get back to you soon.');
+                  alert(' Message sent successfully! We\'ll get back to you soon.');
                   contactForm.reset(); // Clear the form
               } else {
-                  alert('❌ Error: ' + (data.errors ? JSON.stringify(data.errors) : 'Something went wrong'));
+                  alert(' Error: ' + (data.errors ? JSON.stringify(data.errors) : 'Something went wrong'));
               }
           } catch (error) {
-              alert('❌ Could not connect to server. Make sure the backend is running at http://127.0.0.1:8000');
+              alert('Could not connect to server. Make sure the backend is running at http://127.0.0.1:8000');
               console.error('Error:', error);
           } finally {
               // Restore button
